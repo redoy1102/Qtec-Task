@@ -1,6 +1,4 @@
 #include<bits/stdc++.h>
-#define endl '\n'
-#define long long int int
 using namespace std;
 
 int searching_target(int numbers[], int arraySize, int targetNumber)
@@ -40,7 +38,7 @@ int close_index(int numbers[], int arraySize, int targetNumber)
     return smallNumberIndex + 1;
 }
 
-void solve()
+int main()
 {
     // Taking input
     int arraySize;
@@ -53,8 +51,11 @@ void solve()
     int targetNumber;
     cin >> targetNumber;
 
+    // using built in function
+    sort(numbers, numbers+arraySize);   // O(n log n).
+
     // using selection sort algorithm
-    for (int i = 0; i < arraySize; i++)
+    for (int i = 0; i < arraySize; i++)     // O(N*N)
     {
         for (int j = i+1; j < arraySize; j++)
         {
@@ -75,17 +76,6 @@ void solve()
     }
     else{
         cout << indexNumber << endl;
-    }
-    
-}
-int main()
-{
-    int t;
-    // cin >> t;
-    t = 1;
-    while(t--)
-    {
-        solve();
     }
 
     return 0;
