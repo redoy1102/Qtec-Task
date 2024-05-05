@@ -52,7 +52,7 @@ int main()
     cin >> targetNumber;
 
     // using built in function
-    sort(numbers, numbers+arraySize);   // O(n log n).
+    // sort(numbers, numbers+arraySize);   // O(n log n).
 
     // using selection sort algorithm
     for (int i = 0; i < arraySize; i++)     // O(N*N)
